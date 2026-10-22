@@ -4,7 +4,7 @@ import Entering from "@/components/Entering.vue";
 </script>
 
 <template>
-    <Entering/>
+    <RouterView/>
 </template>
 
 <style scoped>
