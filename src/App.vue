@@ -1,7 +1,4 @@
-<script setup>
-
-import Entering from "@/components/Entering.vue";
-</script>
+<script setup></script>
 
 <template>
     <RouterView/>

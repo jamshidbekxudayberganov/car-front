@@ -8,6 +8,14 @@ const routes = [
     {
         path: "/category",
         component: () => import('@/components/Category.vue')
+    },
+    {
+        path: "/cards",
+        component: () => import('@/components/Cars_Cards.vue')
+    },
+    {
+        path: "/inside",
+        component: () => import('@/components/Abaut_Car.vue')
     }
 ]
 export default createRouter({
