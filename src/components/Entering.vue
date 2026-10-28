@@ -10,9 +10,9 @@ const menuOpen = ref(false)
             <div class="col-12 d-flex align-items-center position-relative">
                 <router-link class="fs-1 text-white fw-bolder text-decoration-none" to="/">CarWorld</router-link>
                 <nav class="d-none d-lg-flex gap-4 position-absolute top-50 start-50 translate-middle">
-                    <a class="text-white text-decoration-none fs-5" href="#">Bosh sahifa</a>
-                    <a class="text-white text-decoration-none fs-5" href="#">Mashinalar</a>
-                    <a class="text-white text-decoration-none fs-5" href="#">Kategoryalar</a>
+                    <router-link to="/" class="text-white text-decoration-none fs-5" href="#">Bosh sahifa</router-link>
+                    <router-link to="/cards" class="text-white text-decoration-none fs-5" href="#">Mashinalar</router-link>
+                    <router-link to="/category" class="text-white text-decoration-none fs-5" href="#">Kategoryalar</router-link>
                 </nav>
                 <div class="d-flex justify-content-end align-items-center ms-auto gap-4">
                     <a class="text-white fs-4 text-decoration-none" href="#">

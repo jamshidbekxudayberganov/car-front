@@ -10,9 +10,9 @@ const menuOpen = ref(false)
             <div class="col-12 d-flex align-items-center position-relative mt-4">
                 <router-link class="fs-1 text-white fw-bolder text-decoration-none" to="/">CarWorld</router-link>
                 <nav class="d-none d-lg-flex gap-4 position-absolute top-50 start-50 translate-middle">
-                    <a class="text-white text-decoration-none fs-5" href="#">Bosh sahifa</a>
-                    <a class="text-white text-decoration-none fs-5" href="#">Mashinalar</a>
-                    <a class="text-white text-decoration-none fs-5" href="#">Kategoryalar</a>
+                    <router-link to="/" class="text-white text-decoration-none fs-5" href="#">Bosh sahifa</router-link>
+                    <router-link to="/cards" class="text-white text-decoration-none fs-5" href="#">Mashinalar</router-link>
+                    <router-link to="/category" class="text-white text-decoration-none fs-5" href="#">Kategoryalar</router-link>
                 </nav>
                 <div class="d-flex justify-content-end align-items-center ms-auto gap-4">
                     <a class="text-white fs-4 text-decoration-none" href="#">
@@ -35,7 +35,7 @@ const menuOpen = ref(false)
                 <a class="text-white text-decoration-none fs-5" href="#">Kategoryalar</a>
                 <a class="btn btn-outline-light rounded-4 px-4 py-3" href="#">Login</a>
             </div>
-            <div class="col-6 d-flex align-items-center mt-5 ">
+            <div class="col-12 col-lg-6 d-flex align-items-center mt-5 ">
                 <div id="carouselExampleIndicators" class="carousel slide rounded-5 overflow-hidden" data-bs-ride="carousel" data-bs-interval="2000">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -76,8 +76,8 @@ const menuOpen = ref(false)
                     </button>
                 </div>
             </div>
-            <div class="col-6 d-flex justify-content-center">
-                <div class="box mt-5 px-5 py-4">
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
+                <div class="box mt-5 px-3 px-md-5 py-4">
                     <p class="text-primary fw-bolder ">Sportcar · 2020</p>
                     <p class="text-white fs-1 fw-bolder">Koenigsegg Jesko</p>
                     <hr class="text-light-emphasis">
@@ -120,7 +120,7 @@ const menuOpen = ref(false)
                         </p>
                         <a  href="https://www.koenigsegg.com/model/jesko-attack"
                             target="_blank"
-                            class="btn btn-primary rounded-4 mt-3 fs-3 d-flex align-items-center justify-content-center fw-bolder">
+                            class="btn btn-primary buy-btn rounded-4 mt-3 fs-3 d-flex align-items-center justify-content-center fw-bolder">
                             <i class="bi bi-cart3 me-2"></i>Sotib olish
                         </a>
                         <p class="text-body-emphasis mt-3 d-flex justify-content-center">
@@ -157,13 +157,31 @@ const menuOpen = ref(false)
 .text-dark-emphasis{
     background-color: #181f2e;
 }
-.btn{
+.buy-btn{
     height: 80px;
     transition: all 0.3s ease;
 }
-.btn:hover{
+.buy-btn:hover{
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(13, 110, 253, 0.6);
+}
+@media (max-width: 991.98px){
+    .container-fluid{
+        padding: 0 16px 2rem;
+    }
+    .box{
+        width: 100%;
+        margin-left: 0;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .text-dark-emphasis{
+        width: calc(50% - 0.5rem);
+    }
+    .buy-btn{
+        height: 60px;
+    }
 }
 </style>
 <style>
